@@ -1,46 +1,49 @@
-#  TestApp
-[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](http://standardjs.com/)
+## [fastlane match](https://github.com/fastlane/fastlane/tree/master/match)
 
-* Standard compliant React Native App Utilizing [Ignite](https://github.com/infinitered/ignite)
+This repository contains all your certificates and provisioning profiles needed to build and sign your applications. They are encrypted using OpenSSL via a passphrase.
 
-## :arrow_up: How to Setup
+**Important:** Make sure this repository is set to private and only your team members have access to this repo.
 
-**Step 1:** git clone this repo:
+Do not modify this file, as it gets overwritten every time you run `match`.
 
-**Step 2:** cd to the cloned repo:
+### Install [fastlane match](https://github.com/fastlane/fastlane/tree/master/match)
 
-**Step 3:** Install the Application with `npm install`
+```
+sudo gem install match
+```
 
+Make sure you have the latest version of the Xcode command line tools installed:
 
-## :arrow_forward: How to Run App
+```
+xcode-select --install
+```
 
-1. cd to the repo
-2. Run Build for either OS
-  * for iOS
-    * run `react-native run-ios`
-  * for Android
-    * Run Genymotion
-    * run `react-native run-android`
+### Usage
 
-## :no_entry_sign: Standard Compliant
+Navigate to your project folder and run
 
-[![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
-This project adheres to Standard.  Our CI enforces this, so we suggest you enable linting to keep your project compliant during development.
+```
+match appstore
+```
+```
+match adhoc
+```
+```
+match development
+```
 
-**To Lint on Commit**
+For more information open [fastlane match git repo](https://github.com/fastlane/fastlane/tree/master/match)
 
-1. Install git-hooks => On a Mac `brew install git-hooks` - [Other](https://github.com/icefox/git-hooks/)
-2. Setup on Repo => `git hooks --install`
+### Content
 
-**Bypass Lint**
+#### certs
 
-If you have to bypass lint for a special commit that you will come back and clean (pushing something to a branch etc.) then you can bypass git hooks with adding `--no-verify` to your commit command.
+This directory contains all your certificates with their private keys
 
-**Understanding Linting Errors**
+#### profiles
 
-The linting rules are from JS Standard and React-Standard.  [Regular JS errors can be found with descriptions here](http://eslint.org/docs/rules/), while [React errors and descriptions can be found here](https://github.com/yannickcr/eslint-plugin-react).
+This directory contains all provisioning profiles
 
-## :open_file_folder: Related Articles
-* [Understanding Keyboard Avoiding Code](https://shift.infinite.red/avoiding-the-keyboard-in-react-native-56d05b9a1e81#.s4bzjlc7l)
-* [Understanding Redux Sagas](https://shift.infinite.red/using-redux-saga-to-simplify-your-growing-react-native-codebase-2b8036f650de#.2o2rmz888)
+------------------------------------
 
+For more information open [fastlane match git repo](https://github.com/fastlane/fastlane/tree/master/match)
